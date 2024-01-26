@@ -1,0 +1,1577 @@
+/*! HTML5 Boilerplate v7.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 1.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+ 
+
+ 
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+
+
+ /* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+    html{
+        box-sizing: border-box;
+    }
+
+    *,*:before,*:after{
+        box-sizing: inherit;
+    }
+
+    body{
+        background-color: #F2F2F2;
+        font-family: 'Sriracha', sans-serif!important;
+    }
+    /** Globales **/
+    .seccion{
+        padding: 30px 0;
+    }
+
+    .seccion p{
+        font-size: 1.2;
+        text-align:center;
+    }
+
+    h2{
+        font-family: 'Sriracha', sans-serif;
+        text-align: center;
+        font-size: 3.4em;
+        color: rgb(4, 4, 4);
+        margin:0;
+        font-weight: 500;
+    }
+    
+
+    /* Separador */
+    h2:after{
+        content: '';
+        margin: 0 auto;
+        /*background-image: url(../img/separadorboda.png);*/
+        width: 100px;
+        height: 30px;
+        display: block;
+    }
+
+    h3{
+        font-size: 1.4em;
+        color: #FE4918;
+        margin: 0;
+    }
+
+
+    .contenedor{
+        width: 90%;
+        margin:0 auto;
+    }
+
+    .fixed{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+
+    .navegacion-principal a.activo{
+        border-bottom: 5px solid #FE4918;
+    }
+
+    .activo2{
+        background-color: #FE4918;
+        color: #FFFFFF!important;
+    }
+
+/* ==========================================================================
+            Header
+   ========================================================================== */    div.hero{
+        background-image: url(../img/DSC_9596.jpg);
+        background-color: rgb(100, 100, 100);
+        background-blend-mode: multiply;
+        height: 100vh; /*Toma todo el alto de la pantalla*/
+        background-position: top center; /*Alinea y centra la imagen*/
+        background-size: cover; /*Tome el ancho y alto sin moverse*/ 
+    }
+
+    div.contenido-header{
+        padding-top: 10px;
+    }
+
+    @media (min-width:768px){
+        div.contenido-header{
+            padding-top: 200px;
+        }
+    }
+
+    nav.redes-sociales{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    nav.redes-sociales a{
+        font-size: 2em;
+        color: #FFFFFF;
+        margin-right: 0.9em;
+
+        text-shadow: 0 2px 12px blanchedalmond;
+    }
+
+    nav.redes-sociales a:hover{
+        text-shadow: 0 2px 20px #FE4918;
+        color: #e33000;
+    }
+    nav.redes-sociales a:last-child{
+        margin-right: 0;
+    }
+
+    div.informacion-evento{
+        color:#ffffff;
+        width: 90%;
+        margin: 0 auto;
+
+        /* Se aplica un display flex para acomodarlos de manera de columna(Mobil first) */
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+        
+    }
+
+    @media (min-width:768px){
+        div.informacion-evento{
+            /* Se le da un formato para la vista en Desktop en filas */
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+
+    div.informacion-evento p{
+        margin: 0;
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+
+    div.informacion-evento p i{
+        color: #ffffff;
+        font-size: 2rem;
+    }
+
+    div.informacion{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    p.slogan{
+        text-transform: none!important; 
+        text-align: center;
+    }
+
+    p.slogan span{
+        font-weight: bold;
+    }
+
+    h1.nombre-sitio{
+        /* Se le da una fuente ve view*width para que sea responsivo */
+        font-size: 25.6vw;
+        /*font-family: 'PT Sans', sans-serif;*/
+        /*text-transform: uppercase;*/
+        color: #d4a91e;
+        position: relative;
+        text-align: center;
+        font-family: 'Beau Rivage', sans-serif;
+        text-shadow: 0 5px 50px blanchedalmond;
+
+    }
+
+    @media (min-width:768px){
+        h1.nombre-sitio{
+            /* Se le da un tamaño de fuente en Desktop */
+            font-size: 13.2vw;
+            margin: 0;
+            line-height: 0.8;
+            padding:2rem 0;
+        }
+    }
+
+    .nombre-sitio span{
+        position:relative;
+        text-shadow: 0 10px 30px blanchedalmond;
+    }
+
+    @media (min-width:768px){
+        .char1{
+            top: 0px;
+        }
+        .char2{
+            top: 25px;
+        }
+        .char3{
+            top: -10px;
+        }
+        .char4{
+            top: 5px;
+        }
+        .char5{
+            top: -20px;
+        }
+        .char6{
+            top: 0px;
+        }
+        .char7{
+            top: -20px;
+        }
+        .char8{
+            top: 15px;
+        }
+        .char9{
+            top: -5px;
+        }
+        .char10{
+            top: 20px;
+        }
+    }
+    
+
+    
+
+/* ==========================================================================
+            Navegacion
+   ========================================================================== */
+    div.barra{
+        background-color: #353535;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    div.logo {
+        width: 80%;
+    }
+
+    div.logo img{
+        width: 100%;
+    }
+
+    @media (min-width: 768px){
+        div.logo{
+            width: 33%;
+        }    
+    }
+
+/* ==========================================================================
+                Navegacion Principal
+    ========================================================================== */   
+     nav.navegacion-principal{
+        display: none;
+    }
+
+    nav.navegacion-principal a{
+        font-family: 'Oswald', sans-serif;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 1.3em;  
+
+        transition: background-color 1s ease;
+    } 
+
+    
+
+    @media (min-width:769px){
+        nav.navegacion-principal{
+            display: block;
+            width: 67%;
+            float: right;
+            text-align: right;
+        }
+        nav.navegacion-principal a{
+            margin-right:4px;
+            padding: 10px 5px;
+            font-size: 1.2em;  
+            display: inline-block;
+        }
+    }
+
+    @media (min-width:926px){
+      nav.navegacion-principal a{
+            margin-right:10px;
+            padding: 10px;
+        }
+    }
+
+    
+    
+    
+
+
+    nav.navegacion-principal a:hover{
+        background-color: #FE4918;
+    }
+
+    nav.navegacion-principal a:last-child{
+        border: 2px solid #FE4918;
+        color: #FE4918;
+    }
+
+    nav.navegacion-principal a:last-child:hover{
+        color: #ffffff;
+    }
+    
+
+/* ==========================================================================
+            Menu Movil
+   ========================================================================== */
+    div.menu-movil:hover{
+        cursor: pointer;
+    }
+    div.menu-movil{
+        width: 60px;
+        display: block;
+        float: right;
+        text-align: right;
+    }
+
+    div.menu-movil span{
+        height: 8px;
+        margin-bottom: 6px;
+        background-color: #FFFFFF;
+        display: block;
+    }
+
+    @media (min-width:768px){
+        div.menu-movil{
+            display:none;
+        }
+        div.cerrar-menu-movil{
+            display:none;
+        }
+    }
+
+    div.cerrar-menu-movil:hover{
+        cursor: pointer;
+    }
+
+    div.cerrar-menu-movil{
+        width:60px;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        display:none;
+        margin-bottom: 1.8rem;
+        padding: 0;
+    }
+    div.cerrar-menu-movil span{
+        height: 20px;
+        width:50px;
+        background-color: white;
+        display: block;
+        left:0;
+        position: absolute;
+    }
+
+    div.cerrar-menu-movil span:nth-child(1){
+        transform: rotate(230deg);
+    }
+    div.cerrar-menu-movil span:nth-child(2){
+        transform: rotate(130deg);
+    }
+
+
+    .flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .flex2{
+        display: flex!important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+/* ==========================================================================
+                Talleres
+   ========================================================================== */
+    section.programa{
+        position: relative;
+    }
+
+    div.contenedor-video{
+        max-width: 100%;
+        overflow-x:hidden;
+    }
+
+    div.contenido-programa{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    div.programa-evento{
+        background-color: rgb(255, 255, 255, 0.8);
+        padding: 15px;
+        width:100%;
+        margin-top: 50px;
+    }
+
+    @media (min-width:768px){
+        div.programa-evento{
+            width: 50%;
+        }
+    }
+
+    nav.menu-programa{
+        border-bottom: 1px solid #FE4918;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+
+    @media (min-width:768px){
+        nav.menu-programa{
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+
+    nav.menu-programa a{
+        font-family: 'Oswald', sans-serif;
+        text-decoration: none;
+        color: #000000;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+        font-weight: bold;
+        padding-bottom: 10px;
+        opacity:0.4;
+        transition: 1s;
+    }
+
+    nav.menu-programa a.activo{
+       opacity: 1;
+       font-size: 1.4em;
+    }
+
+    nav.menu-programa a i{
+        color: #FE4918;
+        font-size: 1.6em;
+        margin-right: 10px;
+    }
+
+    
+
+    /* ==========================================================================
+            Detalle del EVENTO
+    ========================================================================== */
+
+    div.detalle-evento{
+        border-bottom: 1px solid #FE4918;
+    }
+
+    div.detalle-evento:nth-child(2){
+        border:none;
+    }
+
+
+    div.detalle-evento h3{
+        color: #FE4918;
+        padding: 0px 30px;
+        font-size: 1.8em;
+        font-family: 'PT Sans', sans-serif;
+    }
+
+    div.detalle-evento p{
+        padding: 0px 30px;
+        font-weight: bold;
+    }
+
+    div.detalle-evento i{
+        color: #FE4918;
+        font-size: 25px;
+        padding-right: 20px;
+    }
+    
+    ul{
+        list-style:none;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .button{
+        background-color:#FE4918;
+        padding: 10px 40px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.4em;
+        margin-top: 10px;
+        display: inline-block;
+        transition: all 1s ease-in;
+        border: 1px solid #fe4918;
+        cursor: pointer;
+    }
+
+    .button.hollow,
+    .button.hollow:hover{
+        color: #fe4918;
+        background-color: white;
+    }
+
+    .button.transparente{
+        background: rgb(0,0,0,0);
+        border:2px solid #FFFFFF;
+    }
+
+    .button.transparente:hover{
+        border:2px solid #d4a91e;
+    }
+
+    .button:hover{
+        background-color: #d4a91e;
+    }
+
+   
+    a.float-rigth{
+        float: right;
+    }
+
+/* ==========================================================================
+            Invitados
+    ========================================================================== */    
+    ul.lista-invitados{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    ul.lista-invitados li{
+        width: 48%;
+        padding: 10px;
+    }
+
+    @media (min-width: 768px){
+        ul.lista-invitados li{
+            width: 32%;
+        }
+    }
+
+    ul.lista-invitados li img{
+        max-width: 100%;
+        filter: grayscale(1); /*Filtro para grises*/
+        transition: all .5s ease-in-out;
+    }
+
+    ul.lista-invitados li:hover img{
+        max-width: 100%;
+        filter: grayscale(0);
+        transform: rotateZ(5deg) scale(1.2);
+
+
+    }
+
+    div.invitado{
+        position: relative;
+        overflow: hidden;
+    }
+
+    div.invitado p{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 15px 10px;
+        margin: 0;
+        background-color: rgb(0,0,0,0.55); 
+        width: 100%;
+        text-align: left; 
+        color: #fe4918;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.4em;
+        text-transform: uppercase;
+        transition: all .5s ease-in-out;
+
+    }
+
+    ul.lista-invitados li:hover p{
+        bottom: -100px;
+        opacity: 0;
+    }
+
+    
+
+ /* ==========================================================================
+            Resumen de Evento
+   ========================================================================== */
+
+    .parallax::before{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left:0;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        filter: brightness(0.8);
+    }
+    div.contador{
+            position: relative;
+            height: auto;
+    }
+    
+    div.contador::before{
+            background-image: url(../img/bg-resumen.jpg);
+            content: '';
+    }
+
+    ul.resumen-evento{
+        position: relative; /*Resetea cuando ya se tien posiciones*/
+        width: 100%;
+        margin: 0 auto;
+        padding: 120px 0;
+        
+        display: flex;
+        flex-direction:row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    p.numero {
+        color:#d4a91e;
+        font-size: 4em;
+        text-align: center;
+        font-weight: bold;
+        margin: 0;
+        padding-bottom: 5px;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    ul.resumen-evento li {
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 1.8em;
+        font-family: 'Oswald', sans-serif;
+        width: 50%;
+    }
+    
+    @media (min-width: 768px){
+        ul.resumen-evento li {
+            width: 25%;
+        }
+    }
+
+/* ==========================================================================
+                    Precios
+   ========================================================================== */
+
+   ul.lista-precios{
+       padding: 10px 0px;
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+       justify-content: space-evenly;
+   }
+
+   div.tabla-precio{
+       border:1px solid #e1e1e1;
+       background-color: #FFFFFF;
+       text-align: center;
+       padding: 40px;
+       transition: all .4s ease-in-out;
+   }
+
+   div.tabla-precio:hover{
+       transform: scale(1.1);
+       border: 1px solid #FE4918;
+       box-shadow: 0px 0px 50px #666;
+   }
+
+   .sinEfectos:hover{
+       transform: none!important;
+   }
+
+   div.tabla-precio ul li{
+       font-family: 'PT Sans', sans-serif;
+       font-size: 14px;
+       margin-bottom: 20px;
+       text-transform: UPPERCASE;
+       color: #868686;
+       line-height: 26px;
+       flex: 1;
+
+   }
+
+   @media (min-width:768px){
+       
+        .lista-precios li{
+            flex: 0 1 calc(33.3% - 1rem);
+        }
+
+   }
+   div.tabla-precio h3{
+        font-family: 'Oswald', sans-serif;
+        font-size: 16px;
+        text-transform: uppercase;
+   }
+
+   div.tabla-precio p.numero{
+       color: #000000;
+       margin-top: 20px;
+   }
+
+   /* Para poner el icono antes */
+   div.tabla-precio ul li::before{
+        font-family:"Font Awesome 5 Free";
+        /* Usar el font-weight por arriba de 501 */
+        font-weight: 800;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 5px;
+        color: green;
+        -webkit-font-smoothing:antialiased;
+        content:'\f00c';  
+        font-style: auto; 
+        
+    }
+
+
+
+ /* ==========================================================================
+               Mapa
+   ========================================================================== */
+
+    div.mapa{
+        height: 400px;
+        width: 100%;
+    }
+
+ /* ==========================================================================
+        Testimoniales
+   ========================================================================== */
+
+   div.testimoniales{
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+   }
+
+   div.testimonial{
+    padding: 5px;
+    }
+
+
+   @media (min-width:768px){
+        div.testimoniales{
+            flex-direction:row;
+        }
+
+        div.testimonial{
+            width: 32%;
+        }
+   }
+
+   div.testimonial{
+       padding: 5px;
+       padding-bottom: 20px;
+   }
+
+   blockquote{
+       background-color: white;
+       border: 1px solid #e1e1e1;
+       position: relative;
+       margin: 0 0 10px 0;
+       padding-bottom:20px;
+   }
+
+   blockquote p{
+       text-align: justify!important;
+       font-size: 1em!important;
+       padding: 0 25px 0 65px;
+       font-family: 'PT Sans',sans-serif;
+    }
+
+    blockquote p::before{
+        font-family:"Font Awesome 5 Free";
+        position: absolute;
+        content: '\201c';
+        left: 13px;
+        top: 0px;
+        font-size: 5rem;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        color: #fe4918;
+     }
+
+    footer.info-testimonial{
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    footer.info-testimonial img{
+       width: 20%;
+       height: 20%;
+       border-radius: 50%;
+       margin-left: 20px;
+   }
+
+   footer.info-testimonial cite{
+       color: #fe4918;
+       text-transform: uppercase;
+       text-align: left;
+       font-size: 12px;
+       padding-top: 20px;
+       width: 60%;
+       font-weight: bold;
+       font-style: normal;
+   }
+
+   footer.info-testimonial cite span{
+       color: #000000;
+       display:block;
+       text-transform: none;
+       margin-top: 10px;
+   }
+
+
+/* ==========================================================================
+        Newsletter
+   ========================================================================== */
+
+   div.newsletter{
+       position: relative;
+       height: auto;
+   }
+
+   div.newsletter::before{
+       background-image: url(../img/templo.jpg);
+       content: '';
+       background-color: rgb(80, 80, 80);
+        background-blend-mode: multiply;
+   }
+
+   div.newsletter .contenido{
+       padding: 100px 0;
+       color: #FFFFFF;
+       text-align:center;
+       position: relative;
+   }
+
+   div.newsletter .contenido p{
+       font-size: 1.3em;
+       text-transform: capitalize;
+   }
+
+   div.newsletter .contenido h3{
+       color: #FFFFFF;
+       font-size: 7vw;
+       text-transform: uppercase;
+       font-family: 'PT Sans',sans-serif;
+   }
+
+   /*--- 2222*/
+   div.newsletter2{
+    position: relative;
+    height: auto;
+    }
+
+    div.newsletter2::before{
+        background-image: url(../img/salon.jpg);
+        content: '';
+        background-color: rgb(80, 80, 80);
+        background-blend-mode: multiply;
+    }
+
+    div.newsletter2 .contenido{
+        padding: 100px 0;
+        color: #FFFFFF;
+        text-align:center;
+        position: relative;
+    }
+
+    div.newsletter2 .contenido p{
+        font-size: 1.3em;
+    }
+
+    div.newsletter2 .contenido h3{
+        color: #FFFFFF;
+        font-size: 7vw;
+        text-transform: uppercase;
+        font-family: 'PT Sans',sans-serif;
+    }
+/* ==========================================================================
+        Cuenta regresiva
+   ========================================================================== */
+
+   ul.cuenta-regresiva{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+   }
+
+   ul.cuenta-regresiva li{
+        text-align: center;
+        font-size: 1.8em;
+        font-family: 'Oswald', sans-serif;
+        width: 50%;
+        text-transform: uppercase;
+    
+    }
+
+    ul.cuenta-regresiva p.numero{
+        font-size: 4em;
+    }
+
+    @media (min-width:768px){
+        ul.cuenta-regresiva li{
+            width: 25%;
+        }
+    }
+
+    
+    /* ==========================================================================
+        Fotter
+   ========================================================================== */
+
+    footer.site-footer{
+        background-color: #030303;
+        margin-top: 100px;
+
+    }
+
+    footer .contenedor > div{
+        width: 30%;
+        color: white;
+        font-size: 12px;
+    }
+
+    @media(max-width:768px){
+        footer .flex{
+            flex-direction: column;
+            align-items: center;
+        }
+        footer .contenedor > div{
+            width: 90%;
+
+        }
+    }
+    
+
+    footer h3{
+        color: white;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+        padding: 10px 0;
+        margin-top: 30px;
+    }
+
+    footer span{
+        color:#d4a91e;
+    }
+
+    footer li{
+        margin: 0;
+        padding-bottom: 10px;
+    }
+
+    footer nav.redes-sociales{
+        text-align: left;
+    }
+
+    p.copyright{
+        color: white;
+        background-color: #201f1f;
+        margin: 20px 0 0 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+
+    /* ==========================================================================
+    ==========================================================================
+                    Pagina Reservaciones
+        ==========================================================================
+   ========================================================================== */
+    h3.upper
+    {
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+
+    
+    .bgWhite{
+        background-color: white;
+    }
+    .caja{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        background-color: white;
+        padding: 1.2rem 0;
+        margin-bottom: 2rem;
+        
+    }
+
+    .campo{
+        margin-bottom: 1rem;
+    }
+
+    .campo label{
+        display: block;
+        text-align: center;
+    }
+    .campo input{
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+    }
+
+    @media (min-width:768px){
+        .caja{
+            flex-direction: row;
+        }
+
+        .campo label,
+        .campo input{
+            display: inline-block;
+        }
+
+        .campo{
+            margin-bottom: 0;
+            flex: 0 0 calc(33% - 1rem);
+        }
+    }
+
+     /* ==========================================================================
+            EVENTOS
+   ========================================================================== */
+   .orientacion{
+       display: flex;
+       flex-direction: column;
+   }
+
+   .contenido_dia{
+       display: none;
+   }
+   .contenido_dia h4{
+       text-align: center;
+       font-size: 1.2rem;
+       border-bottom: 2px solid #fe4918;
+       padding-bottom: 1.1rem;
+       font-weight: bold;
+   }
+   .contenido_dia p{
+       font-weight: bold;
+       font-size: 1.2rem;
+   }
+   .contenido_dia div{
+       float: left;
+       width: 30%;
+   }
+
+   .contenido_dia label{
+       display: block;
+       padding-bottom: 0.5rem;
+   }
+
+   .contenido_dia time{
+       color: #fe4918;
+       font-weight: bold;
+       padding: 0 0.5rem 0 1.2rem;
+   }
+
+   @media (max-width: 768px){
+    .contenido_dia div{
+        float: left;
+        width: 100%;
+    }
+   }
+  
+/* ==========================================================================
+            Resumen
+   ========================================================================== */
+
+   .estiloCaja{
+       display: flex;
+       flex-direction: column;
+       padding: 2rem;
+   }
+
+   select{
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+   }
+
+   
+   .estiloCaja div{
+       flex: 0 0 50%;
+   }
+   .estiloCaja .campo{
+    margin-bottom: 1rem;
+   }
+
+   #extras{
+        padding-bottom: 2rem;
+   }
+
+   .estiloCaja p{
+       font-size: 1.4rem;
+       font-weight: bold;
+       text-transform: uppercase;
+   }
+
+   .centrar{
+       display: block;
+       width: 50%;
+       margin: 0 auto;
+   }
+   
+   @media (min-width: 768px){
+        .estiloCaja{
+            flex-direction: row;
+        }
+        select{
+            display: inline;
+        }
+        #extras{
+            padding-bottom: 0;
+    }
+   }
+
+  
+   #sumaTotal{
+       text-align: center;
+       padding-bottom: 1rem;
+       color: #FE4918;
+       font-weight: bold;
+       font-size: 2.9rem;
+   }
+
+   #lista-productos{
+        text-align: left;
+        color: #FE4918;
+        font-weight: bold;
+        font-size: 1rem;
+        border: 2px solid #2e2e2e;
+        border-radius: 2rem;
+        width: 50%;
+        margin: 0 auto;
+        padding: 1rem;
+   }
+
+   .error{
+       flex: 0 0 100%;
+       margin-top: 1rem;
+       text-align: center;
+       color: red;
+       font-weight: bold;
+       border: 2px dotted red;
+       display: none;
+       padding: 0.8rem;
+       
+   }
+
+   /* ==========================================================================
+    ==========================================================================
+                    Pagina Conferencia
+        ==========================================================================
+   ========================================================================== */
+  
+   div.galeria{
+       display:flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+       justify-content: space-around;
+    
+
+       width:90%;
+       margin: 0 auto;
+   }
+
+   div.galeria a{
+       flex: 0 0 10%;
+       margin-bottom: 15px;
+   }
+   div.galeria a img{
+       border-radius: 10%;
+   }
+
+   /* ==========================================================================
+    ==========================================================================
+                    Pagina Calendario
+        ==========================================================================
+   ========================================================================== */
+
+   h3.tituloCalendario{
+       background-color: #FE4918;
+       color: white;
+       text-align: center;
+       text-transform: capitalize;
+       padding: 1rem 0;
+   }
+
+   
+
+   div.resumen-dia{
+       display:flex;
+       flex-direction: row;
+       justify-content: left;
+       flex-wrap: wrap;
+
+   }
+
+   div.evento{
+       flex: 0 0 calc(50%);
+       border: 1px solid rgba(231, 219, 219, 0.9);
+       transition: 0.2s ease-in;
+
+   }
+
+   div.evento:hover{
+       transform: scale(1.1);
+       border:none;
+       background-color: rgba(231, 219, 219, 0.4);
+   }
+
+   div.evento p{
+    font-weight: 800;
+   }
+   div.evento p i{
+       color: #FE4918;
+   }
+
+   @media (min-width:768px){
+        div.evento{
+            flex: 0 0 calc(33.3%);
+        }
+    }
+
+    
+    div.cboxElement{
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 2rem;
+
+        
+    }
+
+    div.cboxElement h2{
+        padding:0;
+        margin: 1rem 0;
+    }
+
+    div.cboxElement img{
+        border-radius: 2rem;
+    }
+
+    div.cboxElement p{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size:1.1rem;
+    }
+
+    .insignias i{
+        color: gold;
+        font-size:3rem;
+    }
+   
+
+ /* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+ .hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+
+/*
+* Extends the .visuallyhidden class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+ 
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+   @media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+ 
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+   @media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* BENDICION */
+.bendicion h3{
+    background-color: #d4a91e;
+    text-align: center;
+    color:white;
+    font-size: 2rem;
+}
+
+.bendicion p{
+    font-size: 2rem;
+    font-family: 'Beau Rivage', sans-serif;
+    font-weight: bold;
+}
+
+
