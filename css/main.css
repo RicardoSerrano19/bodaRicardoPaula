@@ -977,6 +977,9 @@ textarea {
     height: auto;
     }
 
+    .gold{
+        background-color: #d4a91e!important;
+    }
     div.newsletter2::before{
         background-image: url(../img/salon.jpg);
         content: '';
